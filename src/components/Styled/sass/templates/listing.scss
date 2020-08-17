@@ -1,0 +1,24 @@
+.retnews-listing-container {
+  // min-height: 100%;
+  // min-width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 8px 20px 8px rgba(0,0,0, 0.1);
+  padding: 18px 0;
+
+}
+.retnews-posts-container{
+  padding: 60px 4px;
+
+}
+.retnews-paging-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  a{
+    padding: 0 8px;
+  }
+}

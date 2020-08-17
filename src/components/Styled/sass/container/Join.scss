@@ -1,0 +1,21 @@
+
+
+@media (max-width: 535px) {
+
+.resto-container {
+  &.join{
+    padding: 120px 2vw 0 2vw !important;
+
+  }
+}
+}
+
+@media (max-width: 832px) {
+ 
+  .resto-container {
+    &.join{
+      padding: 143px 8vw 0 8vw;
+
+    }
+  }
+}

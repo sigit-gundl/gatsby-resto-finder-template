@@ -1,0 +1,185 @@
+.post-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.retnews-header{
+
+  &--post{
+    position: relative;
+    width: 100%;
+  }
+  &--wrap{
+    position: relative;
+    height: 280px;
+
+    width: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+}
+
+&--nav-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 8px;
+  color: white;
+  &--item {
+    min-width: 87px;
+  }
+}
+&--nav-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 8px;
+}
+}
+
+.retnews-img{
+  &--wrap, &-header--wrap{
+    width: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+  &--wrap{
+    margin-top: 8px;
+    height: 180px;
+
+  }
+  &-header--wrap{
+    height: 280px;
+  }
+ 
+}
+
+.retnews-post--wrap{
+  align-items: center;
+  display: flex;
+  padding: 12px 8px;
+  .retnews-post-item{
+    &:first-child{
+      width: 100%;
+    }
+    h1{
+      margin: 0 0 4px;
+    }
+  }
+}
+.retnews-icon--text{
+  display: flex;
+  align-items: center;
+  strong{
+    margin: 3px 0 0 4px;
+  }
+}
+.retnews-section{
+  &--post{
+    width: 100%;
+  }
+}
+.retnews-fill-flex{
+  width: 100%;
+}
+span.avatar{
+  position: relative;
+  width: 85px;
+  height: 40px;
+  max-width: 41px;
+  min-width: 41px;
+  border-radius: 100%;
+  background-color: #e1e0e0;
+  opacity: 0.8;
+  vertical-align: middle;
+
+  img{
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 6px;
+  }
+  &:hover {
+      transform: scale(1.04);
+      opacity: 1;
+
+    }
+}
+.retnews-user{
+  &--name{
+      width: 100%;
+      margin-left: 8px;
+  }
+  &--state{
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: rgb(172, 172, 172);
+      &.store{
+          background: aliceblue;
+
+      }
+      &.people{
+          background: rgb(255, 0, 140);
+      }
+      &.partner{
+          background: rgb(56, 56, 55);
+      }
+  }
+}
+.retnews-btn-post{
+  box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    line-height: 28px;
+    overflow: visible;
+    vertical-align: middle;
+    align-items: center;
+    z-index: 1;
+    padding: 0 8px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+    border-radius: 4px;
+     svg {
+      fill: #ffffff;
+      transform: scale(0.6);
+      margin: 0 4px -8px 0;
+    }
+    &:hover{
+      color: black;
+      background: #ffffff;
+      transform: scale(1.04);
+
+      svg {
+        fill: #000000;
+      }
+    }
+  
+}

@@ -1,0 +1,65 @@
+.resto-card--testimonal{
+  border-radius: 8px;
+  border: 1.8px solid #2D2C2C;
+  padding: 18px 20px;
+}
+.resto-user--testimonal{
+  strong{
+    text-align: left;
+  }
+}
+.resto-costumer-testimonal{
+  text-align: right;
+  p{
+    margin: 4px 0;
+  }
+}
+.resto-avatar-img{
+  margin-right: 20px;
+  img{
+    width: 80px;
+    border-radius: 100%;
+  }
+}
+
+.resto-partners--wrap{
+  padding: 0 24vw;
+  margin: 0 auto;
+  img{
+    width: 5.4vw;
+    align-items: center;
+    vertical-align: middle;
+    &:nth-child(2), &:nth-child(15){
+      width: 10.8vw;
+      margin: -38px 0px;
+    }
+  }
+}
+
+
+@media (max-width: 918px) {
+  .resto-partners--wrap {
+   display: flex;
+   margin: 2vw auto;
+   padding: 0 8px;
+   align-items: center;
+   vertical-align: middle;
+   overflow-x: scroll;
+   overflow-y: hidden;
+   img{
+    width: 200px;
+    height: 100%;
+    
+    &:nth-child(2), &:nth-child(15){
+      width: 400px;
+      height: 100%;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  }
+  .resto-swipeable-partners{
+    display: block;
+  }
+}
