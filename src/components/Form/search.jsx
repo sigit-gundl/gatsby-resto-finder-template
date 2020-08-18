@@ -23,7 +23,7 @@ import {
 // Text
 import { Strong } from "../Styled/components/text"
 
-const SearchForm = ({ sticky, searchValue, handleChange }) => {
+const SearchForm = ({ searchValue, handleChange }) => {
     const [find, setFind] = useState(false);
     const [findState, setFindState] = useState();
     const handleClick = () => {

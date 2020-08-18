@@ -10,7 +10,7 @@ import { SpaceBr, Strong, Header1 } from "../../../components/Styled/components/
 // Img
 import { FitCoverImg } from "../../../components/Styled/components/img";
 
-const FindContainer = ({sticky, element, searchValue, handleChange}) => {
+const FindContainer = ({ searchValue, handleChange }) => {
     return (
       <Section active={searchValue}>
       {searchValue ? null : <FitCoverImg src={FindImg} alt=""/>}
@@ -29,7 +29,7 @@ const FindContainer = ({sticky, element, searchValue, handleChange}) => {
       </>
       }
       <JustifyCenter>
-        <SearchForm searchValue={searchValue} handleChange={handleChange} ref={element} sticky={sticky}/>
+        <SearchForm searchValue={searchValue} handleChange={handleChange}/>
       </JustifyCenter>
       </FindStyled>
     </SectionWrap>

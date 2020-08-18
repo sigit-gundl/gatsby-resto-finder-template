@@ -4,25 +4,23 @@ import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 
 import config from "../../data/SiteConfig";
-import useSticky from "../components/Commons/Hooks/useSticky";
 import { Finder } from "../container/finder/";
 
-const Listing = ({data, pageContext}) => {
-  
-    const { isSticky, element } = useSticky();
+const Listing = (data, { pageContext }) => {
     const postEdges = data.allMarkdownRemark.edges;
+
+    const { currentPageNum, pageCount } = pageContext;
     // search
-    const [searchValue, setSearchValue] = useState();
+    const [searchValue, setSearchValue] = useState(false);
     const handleChange = (e) => {
       setSearchValue(e.target.value);
     }
     return (
       <Layout searchValue={searchValue} config={config}>
-        <Finder pageContext={pageContext} postEdges={postEdges} config={config} searchValue={searchValue} handleChange={handleChange} sticky={isSticky} element={element}/>
+        <Finder postEdges={postEdges} config={config} pageCount={pageCount} currentPageNum={currentPageNum} searchValue={searchValue} handleChange={handleChange}/>
       </Layout>
     );
 }
-
 
 export default Listing;
 

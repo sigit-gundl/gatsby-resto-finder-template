@@ -26,10 +26,10 @@ export const Pagination = styled.div`
   display: flex;
   justify-content: center;
 `
-export const Finder = ({config, postEdges, pageContext, searchValue, sticky, element, handleChange}) => {
+export const Finder = ({ config, postEdges, searchValue, handleChange, currentPageNum, pageCount }) => {
     return(
       <> 
-      <FindContainer searchValue={searchValue} handleChange={handleChange} sticky={sticky} element={element} />
+      <FindContainer searchValue={searchValue} handleChange={handleChange} />
       {searchValue ?
       null
       :
@@ -43,7 +43,7 @@ export const Finder = ({config, postEdges, pageContext, searchValue, sticky, ele
             <Helmet title={config.siteTitle} />
             <SEO />
             <PostListing postEdges={postEdges} />
-            <RenderPaging pageContext={pageContext}/>
+            <RenderPaging currentPageNum={currentPageNum} pageCount={pageCount}/>
           </ContainerWrap>
         </Container>
         <JoinContainer/>
@@ -55,8 +55,7 @@ export const Finder = ({config, postEdges, pageContext, searchValue, sticky, ele
     )
 }
 
-const RenderPaging = ({pageContext}) => {
-    const { currentPageNum, pageCount } = pageContext;
+const RenderPaging = ({currentPageNum, pageCount }) => {
     const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
     const nextPage = `/${currentPageNum + 1}/`;
     const isFirstPage = currentPageNum === 1;
